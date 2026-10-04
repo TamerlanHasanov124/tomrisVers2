@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-futura: 'Jost', 'Futura', 'Futura PT', system-ui, sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-futura);
+    background-color: #ECEAE5;
+    color: #181819;
+  }
+}
+
+.font-futura {
+  font-family: 'Jost', 'Futura', 'Futura PT', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Texture overlay */
+.bg-concrete-grain {
+  background-color: #ECEAE5;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #ECEAE5;
+}
+::-webkit-scrollbar-thumb {
+  background: #181819;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D12C26;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-33.333333%); }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
